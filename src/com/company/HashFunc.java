@@ -9,9 +9,6 @@ public class HashFunc<Key, Value> {
 
 
 
-    int FindIndex(int hash, int capacityVar) {
-        return hash & (capacityVar - 1);
-    }
-}
+
 
 
