@@ -59,8 +59,3 @@ public class HashFunc<Key, Value> {
         return null;
     }
 }
-
-    int FindIndex(int hash, int capacityVar) {
-        return hash & (capacityVar - 1);
-    }
-
