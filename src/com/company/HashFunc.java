@@ -8,7 +8,7 @@ public class HashFunc<Key, Value> {
     KeyValue[] links = new KeyValue[capacityVar];
 
 
-
+}
 
 
 
