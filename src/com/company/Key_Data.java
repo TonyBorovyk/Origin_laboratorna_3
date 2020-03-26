@@ -1,14 +1,14 @@
 package com.company;
-class KeyValue<Key, Value> {
-    Key mHashKey;
-    Value mValue;
-    int mHash;
-    KeyValue<Key, Value> next;
+class Key_Data<Key, Value> {
+    Key Key_1;
+    Value Value;
+    int Hash;
+    Key_Data<Key, Value> nastypniy;
 
-    KeyValue(int hash, Key hashKey, Value value, KeyValue<Key, Value> next) {
-        mHash = hash;
-        mHashKey = hashKey;
-        mValue = value;
-        this.next = next;
+    Key_Data(int hash, Key Key, Value value, Key_Data<Key, Value> nastypniy_1) {
+        Hash = hash;
+        Key_1 = Key;
+        Value = value;
+        this.nastypniy = nastypniy_1;
     }
 }
