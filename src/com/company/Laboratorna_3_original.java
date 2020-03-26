@@ -35,4 +35,11 @@ public class Laboratorna_3_original {
         }
         return dict;
     }
+    public static void CipherWord (HashFunc<String, String>  dict,String[] splitted){
+        for (String cipherWord : splitted) {
+            System.out.print(cipherWord.toUpperCase() + " : ");
+            System.out.println(dict.Get(cipherWord.toUpperCase()));
+            System.out.println(" ");
+        }
+    }
 }
