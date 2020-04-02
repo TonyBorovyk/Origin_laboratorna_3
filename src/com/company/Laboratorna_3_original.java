@@ -12,14 +12,14 @@ public class Laboratorna_3_original {
         while (sc != null){
             System.out.println("Введіть речення або слово для отриманння розшифровки: ");
             String[] splitted = new String[0];
-            if (scanner.hasNextLine()){
-                String sentence = scanner.nextLine();
-                words = sentence.split(" ");}
-            if(words.length==0){
-                scanner.close();
+            if (sc.hasNextLine()){
+                String sentence = sc.nextLine();
+                splitted = sentence.split(" ");}
+            if(splitted.length==0){
+                sc.close();
                 return;
             }
-            shifr_word(slovnyk1,words);
+            CipherWord(slovnyk1, splitted);
         }
     }
     public static Hash_function<String, String> Slovnyk () throws FileNotFoundException {
@@ -35,10 +35,11 @@ public class Laboratorna_3_original {
         }
         return slovnik;
     }
-    public static void shifr_word (Hash_function<String, String>  dictionary,String[] words){
-        for (String cipherWord : words) {
-            System.out.print(word.toUpperCase() + " : ");
-            System.out.println(dictionary.GetKey(word.toUpperCase()));
+
+    public static void CipherWord (Hash_function<String, String>  dict,String[] splitted){
+        for (String cipherWord : splitted) {
+            System.out.print(cipherWord.toUpperCase() + " : ");
+            System.out.println(dict.GetKey(cipherWord.toUpperCase()));
             System.out.println(" ");
         }
     }
